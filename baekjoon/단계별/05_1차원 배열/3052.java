@@ -23,3 +23,20 @@
 //첫째 줄에, 42로 나누었을 때, 서로 다른 나머지가 몇 개 있는지 출력한다.
 //예제 출력
 // 10
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);	
+		HashSet<Integer> mod = new HashSet<Integer>();
+		
+		for (int i = 0; i < 10; i ++) {
+			mod.add(sc.nextInt() % 42);
+		}
+		
+		System.out.println(mod.size());
+
+	}
+}
