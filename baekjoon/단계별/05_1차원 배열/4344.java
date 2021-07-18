@@ -24,3 +24,45 @@
 // 33.333%
 // 66.667%
 // 55.556%
+import java.util.Scanner;
+ 
+public class Main {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		int[] scores;
+		
+		int test = in.nextInt();
+		
+		for(int i = 0 ; i < test ; i++) {
+ 
+			int student = in.nextInt();
+			scores = new int[student];
+			
+			double sum = 0;
+			
+
+			for(int j = 0 ; j < student ; j++) {
+				int score = in.nextInt();
+				scores[j] = score;
+				sum += score;
+			}
+			
+			double avg = (sum / student) ;
+			double cnt = 0;
+			
+
+			for(int j = 0 ; j < student ; j++) {
+				if(scores[j] > avg) {
+					cnt++;
+				}
+			}
+			
+			System.out.printf("%.3f%%\n",(cnt/student)*100);
+			
+	
+		}
+		in.close();
+	}
+	
+}
